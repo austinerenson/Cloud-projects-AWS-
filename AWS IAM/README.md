@@ -1,38 +1,39 @@
+# AWS Identity and Access Management (IAM)
 
-# Cloud-projects-AWS
+In this project, I set up two EC2 instances and managed access control using IAM policies 
+and user groups. The goal was to deepen my understanding of Cloud Security on AWS.
 
-AWS Identity and Access Management (IAM)
+## Project Walkthrough
 
--In this mini-project, I'll launch two EC2 instances and control who has access to it by use of IAM policies and user groups This is aimed at improving knowledge of Cloud Security.
+<img width="770" height="595" alt="image" src="https://github.com/user-attachments/assets/d483fe24-6771-49bb-b998-7f4feddcde7b" />
 
-Diagrammatic Representation
 
-<img width="770" height="595" alt="image" src="https://github.com/user-attachments/assets/0d48293a-a92a-4bc5-8ad2-cb47abbac2fb" />
 1. Launch EC2 instances
-   - Name prod-name, add tag Key: Env, Value: production. Choose Free Tier eligible options since it is a test project. Proceed without key pair.
-   - Name dev-name, add tag Key: Env, Value: production; second EC2 instance.
+   - Set up the first instance named prod-name, tagged with Key: Env, Value: production. 
+     Selected Free Tier eligible settings and proceeded without a key pair.
+   - Set up a second instance named dev-name with the same tag configuration.
 
-2. Create an IAM policy
+2. Set up an IAM Policy
 
-   We are using the IAM policy to give permission to the development instance only.
-   - In IAM, select policy and create. Paste the contents of policy.json there, this allows for access to the dev environment. Name the policy and create.
+   The IAM policy was configured to grant access to the development instance only.
+   - Navigated to IAM, created a new policy and used the contents of policy.json to 
+     define dev environment permissions. Saved and named the policy.
 
-3. Create an Account Alias
+3. Configure an Account Alias
 
-   Allows for a friendly ID for other onboarded users to use.
-   - On the right side of IAM dashboard, create account alias with name.
+   An account alias makes it easier for other users to sign in with a recognizable ID.
+   - In the IAM dashboard, set up a custom account alias on the right-hand panel.
 
-4. Create IAM Users & User Groups
-   - Still in IAM, create a user group and name it. Ensure to attach the policy you created.
-   - Create a user, add them to the group.
+4. Set up IAM Users & User Groups
+   - Created a user group in IAM and attached the previously created policy to it.
+   - Created a new user and added them to the group.
 
-5. Test access
-   - Use the link to login as IAM user.
-   - Once logged in, ensure you are in the same region as the one you created the instances.
-   - Try to stop the production & development instances and notice the difference.
+5. Verify Access
+   - Signed in using the IAM user login link.
+   - Confirmed the correct region was selected matching where the instances were launched.
+   - Attempted to stop both instances to observe the difference in permissions.
 
 ### Additional steps
 
 1. IAM Policy Simulator
-   - Used to validate policies without affecting resources.
-
+   - Used this tool to test and validate policies without making any changes to live resources.
