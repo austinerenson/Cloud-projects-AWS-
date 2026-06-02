@@ -36,6 +36,10 @@ on AWS to strengthen my networking skills.
 
 ## VPC Traffic Flow & Security
 
+
+<img width="772" height="423" alt="image" src="https://github.com/user-attachments/assets/c3d11edd-d6a9-464a-842a-e6daa9008d83" />
+
+
 1. Set up a Route Table
    - A route table is automatically created with your VPC, just rename it.
    - Add a destination of 0.0.0.0/0 and point it to your internet gateway.
